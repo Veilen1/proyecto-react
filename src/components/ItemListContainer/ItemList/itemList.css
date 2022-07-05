@@ -1,3 +1,17 @@
+.color1 {color: #140f07;}
+.color2 {color: #1b2c52;}
+.color3 {color: #4f5dab;}
+.color4 {color: #9795fb;}
+.color5 {color: #fbd8f6;}
+img{
+        display: block;
+        margin: 0px auto;
+    }
+
+body{
+    background-color: #1b2c52;
+}
+
 .itemList{
     display: flex;
     flex-wrap: wrap;
@@ -6,23 +20,20 @@
     border-width: 5px;
     padding: 5px;
     margin: 10px;
-    background-color: rgb(129, 31, 194);
-    justify-items: baseline;
-    justify-content: space-between;
     align-items: flex-start;
 }
 
 .item:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
-.item{
+.item {
     display: flexbox;
-    justify-items: center;
+    justify-content: center;
     text-align: center;
-    align-content: center;
+    align-content: space-around !important;
     margin: 10px;
     padding: 20px;
-    background-color: rgb(184, 107, 235);  
+    background-color: #4f5dab;  
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     max-width: 500px;
@@ -34,24 +45,58 @@
 
 .item img{
     width: 50%;
-    height: 50%;
-
-    
+    height: 50%;  
 }
 
 .itemCount{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    
+    padding-top: 20px;
+    padding-bottom: 20px;
     flex-wrap: nowrap;
     align-items: center;
+    color: white;
 }
 
 .itemCount button {
     font-weight: bold;
     font-size: 20px;
     border-color: transparent;
+    background-color: transparent;
     border-radius: 4px;
     border: 2px;
+}
+div .itemCount button {
+    color: white;
+    border: 1px solid black;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.item h1 {
+    padding: 15px;
+}
+.itemDetailContainer {
+display: flex;
+flex-direction: column;
+justify-items: center !important;
+width: 100%;
+height: 100%;
+
+}
+
+.itemDetail{
+    display: flexbox;
+    justify-content: center !important;
+    flex-direction: column;
+    background-color: #fff;
+    margin: 50px;
+    max-width: 700px;
+    text-align: center;
+    padding: 15px;
+
+}
+
+.itemDetail img {
+    max-width: 500px;
 }
