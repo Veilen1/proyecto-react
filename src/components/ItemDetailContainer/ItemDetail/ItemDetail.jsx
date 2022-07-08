@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "../../ItemListContainer/ItemList/itemList.css"
 
 const ItemDetail = ({info}) => {
@@ -10,7 +11,9 @@ const ItemDetail = ({info}) => {
             <h1>{`$${info.price}`}</h1>
             <h3>{info.category}</h3>
             <h4>{info.description}</h4>
+            <Link to={"/cart"}>
             <button key={info.id}>COMPRAR</button>
+            </Link>
         </div>
     )
 }

@@ -1,20 +1,25 @@
 import React, { useEffect, useState } from "react";
 import {ItemList} from "./ItemList/ItemList";
+import { useParams } from "react-router-dom";
 
-const ItemListContainer = ({}) => {
-    const [data, setData] = useState([]);
+const ItemListContainer = ({miProp}) => {
+    const [product, setProduct] = useState([]);
 
-        useEffect(() => {
-            const getData = fetch('https://fakestoreapi.com/products?limit=20')
-            getData
-            .then(dataRes=>dataRes.json())
-            .then(dataRes => setData(dataRes))
-        }, [setData])
+    const { categoryId } = useParams();
+
+    useEffect(() => {
+        const URL = categoryId
+            ? `https://fakestoreapi.com/products/category/${categoryId}`
+            : 'https://fakestoreapi.com/products'
+        fetch(URL)
+            .then(res => res.json())
+            .then(data => setProduct(data))
+    }, [categoryId]);
 
 
     return(
         <div className="itemList">
-        <ItemList data={data} ></ItemList>
+        <ItemList product={product} ></ItemList>
         </div>
     )
 
