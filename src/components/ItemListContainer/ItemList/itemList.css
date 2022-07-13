@@ -33,7 +33,7 @@ body{
     align-content: space-around !important;
     margin: 10px;
     padding: 20px;
-    background-color: #4f5dab;  
+    background-color: #614ae0;  
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     max-width: 500px;
@@ -56,10 +56,11 @@ body{
     padding-bottom: 20px;
     flex-wrap: nowrap;
     align-items: center;
-    color: white;
+    color: black;
 }
 
 .itemCount button {
+
     font-weight: bold;
     font-size: 20px;
     border-color: transparent;
@@ -68,7 +69,7 @@ body{
     border: 2px;
 }
 div .itemCount button {
-    color: white;
+    color: black;
     border: 1px solid black;
     padding-left: 5px;
     padding-right: 5px;
@@ -99,4 +100,5 @@ height: 100%;
 
 .itemDetail img {
     max-width: 500px;
+    background-color: transparent;
 }

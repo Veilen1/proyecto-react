@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import {ItemList} from "./ItemList/ItemList";
 import { useParams } from "react-router-dom";
 
-const ItemListContainer = ({miProp}) => {
+const ItemListContainer = () => {
     const [product, setProduct] = useState([]);
 
     const { categoryId } = useParams();
@@ -15,7 +15,6 @@ const ItemListContainer = ({miProp}) => {
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [categoryId]);
-
 
     return(
         <div className="itemList">

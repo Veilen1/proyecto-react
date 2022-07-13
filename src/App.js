@@ -10,14 +10,16 @@ import {
   Route,
 } from "react-router-dom"
 const App = () => {
-  const miMensaje= "Hola";
+
+  const CartContext = React.createContext('')
 
   return (
   <BrowserRouter>
     <NavBar/>
+    <CartContext.Provider value="Pablo" />
       <Routes>
-        <Route path="/" element={<ItemListContainer miProp={miMensaje}/>}/>
-        <Route path="/category/:categoryId" element={<ItemListContainer miProp={miMensaje}/>}/>
+        <Route path="/" element={<ItemListContainer/>}/>
+        <Route path="/category/:categoryId" element={<ItemListContainer/>}/>
         <Route path="/product/:productId" element={<ItemDetailContainer/>}/>
         <Route path="/cart" element={<Cart/>}/>
       </Routes>
