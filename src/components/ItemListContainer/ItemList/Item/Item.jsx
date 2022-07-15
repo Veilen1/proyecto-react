@@ -1,9 +1,12 @@
 import React, {useContext} from 'react'
-import {CartContext} from "../../../../App" 
+import { useCartContext } from '../../../../context/CartContext'
 import "../itemList.css"
 import { Link } from "react-router-dom"
 
+
 const Item = ({info}) => {
+    
+
     return (
         <div className='item'>
             <h1>{info.title}</h1>
