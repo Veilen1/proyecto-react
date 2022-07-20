@@ -3,13 +3,14 @@ import React from "react";
 import NavBar from "./components/Nav/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
-import Cart from "./components/Carrito/CartWidget";
 import CartProvider from "./context/CartContext";
 import {
   BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom"
+import Cart from "./components/Cart/Cart";
+
 
 const App = () => {
 
