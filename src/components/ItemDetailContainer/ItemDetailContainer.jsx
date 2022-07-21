@@ -1,4 +1,5 @@
 import React from 'react'
+import {  getFirestore, doc, getDoc } from "firebase/firestore"
 import { useEffect, useState } from 'react';
 import  ItemDetail  from '../ItemDetailContainer/ItemDetail/ItemDetail';
 import "../ItemListContainer/ItemList/itemList.css"
@@ -10,10 +11,10 @@ const ItemDetailContainer = () => {
     const { productId } = useParams();
 
     useEffect(() => {
-        fetch(`https://fakestoreapi.com/products/${productId}`)
-            .then(res=>res.json())
-            .then(data=>setProduct(data))
-            .catch(err=>console.log(err))
+        const querydb = getFirestore();
+        const queryDoc = doc(querydb, "products", productId)
+        getDoc(queryDoc)
+        .then(res => setProduct({id: res.id, ...res.data()}))
     }, [productId]);
 
 

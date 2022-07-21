@@ -8,6 +8,7 @@ const ItemCart = ({info}) => {
       <img src="" alt="" />
       <div>
         <p>Titulo: {info.title}</p>
+        <img src={info.image} alt="" />
         <p>Cantidad {info.quantity}</p>
         <p>Precio: ${info.price}</p>
         <p>Subtotal: ${info.quantity * info.price}</p>
