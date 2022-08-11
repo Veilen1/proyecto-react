@@ -1,5 +1,4 @@
-import React, {useContext} from 'react'
-import { useCartContext } from '../../../../context/CartContext'
+import React from 'react'
 import "../itemList.css"
 import { Link } from "react-router-dom"
 

@@ -33,6 +33,11 @@ padding-bottom: 20px;
     transition: 1.5s;
     font-size: 20px;
 }
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
 
 .nav-cart {
     width: 3rem;
@@ -57,11 +62,13 @@ padding-bottom: 20px;
     background-color: #8a8a8a;
     transition: 2s;
 }
-nav a h1{
+
+Link *{
 font-weight: bold;
+
 }
 
-nav a h1:hover {
+Link *:hover {
     color: red;
     transition: 1s;
 }

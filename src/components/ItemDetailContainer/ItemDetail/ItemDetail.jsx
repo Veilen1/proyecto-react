@@ -26,6 +26,7 @@ const ItemDetail = ({info}) => {
                 ? <Link to={"/cart"}>Terminar Compra</Link>
                 : <ItemCount stock={5} initial={1} onAdd={onAdd}></ItemCount>
             }
+            <Link to={"/"}>Volver al inicio</Link>
         </div>
     )
 }
