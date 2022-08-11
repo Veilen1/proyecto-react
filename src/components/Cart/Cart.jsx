@@ -37,12 +37,7 @@ const Cart = () => {
         const db = getFirestore();
         const ordersCollection = collection(db, "orders");
         addDoc(ordersCollection, order)
-        .then(({id}) => Swal.fire({
-            icon: "success",
-            title: 'Compra exitosa!',
-            text: 'Tu compra fue realizada con exito, guarda tu numero de orden para cualquier reclamo o consulta',
-            footer: `Numero de orden: (${id})`
-            })
+        .then(({id}) => console.log(id)
         )
     }
     if (cart.length ===0) {

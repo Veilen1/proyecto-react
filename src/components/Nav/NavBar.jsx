@@ -9,7 +9,7 @@ const NavBar = () => {
 
     return (
         <nav className="nav">
-            <Link to={"/"}><h1 className="nav-logo">Mitienda ONLINE</h1></Link>
+            <Link to={"/"}><h1 className="nav-logo">Ecommerce Veilen</h1></Link>
             <ul className="nav-links">
                 <li>
                     <NavLink className={"nav-item"} to={"/category/Remeras"}>Remeras</NavLink>
